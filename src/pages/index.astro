@@ -1,8 +1,11 @@
 ---
 import '../style/global.css';
 
-import Form from '../components/Form.astro'
-import List from '../components/List.astro'
+import Form from '../components/Form.astro';
+import List from '../components/List.astro';
+
+
+
 ---
 
 <html lang="en">
@@ -26,7 +29,7 @@ import List from '../components/List.astro'
 					<Form />
 				</div>
 				<div class="col-img">
-					<img src="./images/illustration-sign-up-mobile.svg" alt="tablet images">
+					<img src="/images/illustration-sign-up-mobile.svg" alt="tablet images">
 
 				</div>
 			</div>
@@ -80,7 +83,8 @@ import List from '../components/List.astro'
 				}
 
 				img {
-					content: url('./images/illustration-sign-up-desktop.svg');
+					content: url('/images/illustration-sign-up-desktop.svg');
+
 					width: 100%;
 					height: 100%;
 				}
