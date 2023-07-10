@@ -16,7 +16,7 @@ btn.addEventListener('click' , (e) => {
   }else {
     form.classList.remove('error');
     span.innerHTML = "";
-    window.location.href = 'http://localhost:3000/success';
+    window.location.href = 'success/index.html';
   }
 
 })
