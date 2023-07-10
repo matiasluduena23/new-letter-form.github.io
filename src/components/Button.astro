@@ -1,0 +1,29 @@
+---
+
+const {valueText} = Astro.props;
+---
+
+
+<input type="button" value={valueText}>
+
+<style>
+  input[type="button"] {
+    width: 100%;
+    padding: 1.2rem;
+    font-weight: 700;
+    border-radius: 7px;
+    border: 1px solid var(--grey-clr);
+    font-size: 16px;
+    background: var(--dark-slate-clr);
+    color: #fff;
+    margin-top: 1.3rem;
+    border: none;
+  }
+
+  input[type="button"]:hover {
+    background: linear-gradient(to right, hsl(340, 100%, 50%) -20% , var(--tomato-clr) ) ;
+    border: none;
+    box-shadow: 0px 10px 30px 0 rgba(255, 98, 87,0.5);
+  }
+
+</style>

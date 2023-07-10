@@ -13,7 +13,7 @@
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./public/design/screenshot.jpg)
 
 
 

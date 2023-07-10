@@ -1,16 +1,98 @@
  
+---
+
+import '../style/global.css';
+import Button from '../components/Button.astro';
+
+const valueText = "Dismiss message";
+---
+
+
+ <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/images/favicon-32x32.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Frontend Mentor | Newsletter sign-up form with success message</title>
+	</head>
+	<body>
+ <div class="container">
+  <main>
+    <section>
+      <figure class="icon-success">
+        <img src="../images/icon-success.svg" alt="icon">
+      </figure>
+    
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <b>ash@loremcompany.com.</b>  
+        Please open it and click the button inside to confirm your subscription. 
+      </p>
+    </section>
+    <div class="btn-wrap">
+      <Button valueText={valueText}></Button>
+    </div>
+    
+  </main>
+ </div>
+ <style>
+
+  main {
+    display: grid;
+    grid-template-rows: 60% 40%;
+    height: 100vh;
+  }
+
+  section {
+    align-self: end;
+  }
+
+  .btn-wrap {
+    align-self: end;
+    padding-bottom: 2rem;
+  }
+
+  figure {
+    width: 50px;
+  }
+
+  img {
+    width:100%;
+  }
+
+  h1 {
+    font-size: max(2.4rem , 3.2vw);
+    font-weight: 700;
+    line-height: 1;
+    margin-block: 1.5rem;
+  }
+
  
 
+ 
 
- <main>
-  <figure class="icon-success">
-    <img src="../../public/images/icon-success.svg" alt="icon">
-  </figure>
-  <h1>Thanks for subscribing!</h1>
-  <p>A confirmation email has been sent to ash@loremcompany.com. 
-    Please open it and click the button inside to confirm your subscription. 
-  </p>
-  <button>Dismiss message</button>
- </main>
+  @media(min-width: 430px){
+    body {
+      background: var(--dark-slate-clr);
+    }
+
+    .container {
+      width: auto;
+    }
+
+    main {
+      background: #fff;
+      grid-template-rows: auto;
+      max-height: 500px;
+      max-width: 500px;
+      border-radius: 20px;
+      padding: 3rem;
+    }
+
+  }
+ </style>
+
+</body>
+</html>
  
  

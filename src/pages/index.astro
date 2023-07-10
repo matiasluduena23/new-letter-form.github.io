@@ -49,17 +49,15 @@ import List from '../components/List.astro'
 			.col-img {
 				width:100%;
 			}
-			
-			ul {
-				margin-block: 1.5rem;
-			}
-
-
 
 			h1 {
 				font-weight: 700;
 				font-size: 2.3rem;
 				margin-block: 1rem;
+			}
+			
+			ul {
+				margin-block: 1.5rem;
 			}
 
 			p {
@@ -81,10 +79,6 @@ import List from '../components/List.astro'
 					margin: 2rem;
 				}
 
-				h1 {
-					font-size: 3.5rem;
-				}
-
 				img {
 					content: url('./images/illustration-sign-up-desktop.svg');
 					width: 100%;
@@ -93,5 +87,9 @@ import List from '../components/List.astro'
 			}
 
 		</style>
+
+		<script >
+			import '../scripts/formValidation.js';
+		</script>
 	</body>
 </html>

@@ -1,14 +1,18 @@
 
 ---
 
+import Button from '../components/Button.astro'
+const valueText = "Subscribe to monthly newsletter";
+
 ---
 
 
 
-<form action="submit" >
-  <p>Email address</p>
-  <input type="text" placeholder="email@company.com">
-  <input type="button" value="Subscribe to monthly newsletter">
+<form action="#" >
+  <div class="wrap-text"><p>Email address</p> <span></span></div>
+  <input type="email" placeholder="email@company.com" >
+  <Button valueText={valueText}></Button>
+
 </form>
 
 <style>
@@ -16,12 +20,18 @@
   form {
     margin-block: 2rem;
   }
-  
-  p {
+
+  .wrap-text {
+    display: flex;
+    justify-content: space-between;
     font-weight: 700;
     margin-bottom: 0.5rem;
   }
   
+  span {
+    color: var(--tomato-clr);
+  }
+
   input {
     width: 100%;
     padding: 1.2rem;
@@ -40,16 +50,15 @@
     color: var(--grey-clr);
   }
 
-  input[type="button"] {
-    background: var(--dark-slate-clr);
-    color: #fff;
-    margin-top: 1.3rem;
-    border: none;
+  
+
+  /* Error styling */
+  form.error input[type="text"] {
+    border: 1px solid var(--tomato-clr); 
   }
 
-  input[type="button"]:hover {
-    background: linear-gradient(to right, hsl(340, 100%, 50%) -20% , var(--tomato-clr) ) ;
-    border: none;
+  form.error input[type="text"]::placeholder {
+    color:  var(--tomato-clr);
   }
 
 </style>
